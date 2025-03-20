@@ -17,5 +17,5 @@ Technologies: Next.js, Nuxt, React, Bulma, Tailwindcss, Bootstrap, Express, more
 Languages: JavaScript, TypeScript, C, C++, C#
            HTML (not a langauge but still), CSS, SASS, Golang, Java (30%)
 Hobbies: Coding, Open Source, Exploring New Tech
-Discord: sitacodes
+Discord: shreyasita
 ```
