@@ -8,14 +8,13 @@
 ```csharp
 shreyawrite@github
 -------------------------
-Terminal: Kitty
+Terminal: Hyper
 IDE: Visual Studio Code 
 Used OS: Arch Linux
-Age: 20
+Age: 16
 Location: India
-Technologies: Next.js, Nuxt, React, Bulma, Tailwindcss, Bootstrap, Express, more..
-Languages: JavaScript, TypeScript, C, C++, C#
-           HTML (not a langauge but still), CSS, SASS, Golang, Java (30%)
+Technologies: Next.js, RestAPI, FastAPI, Tailwindcss, Bootstrap, Express, more..
+Languages: Golang, C, Python, Javascript, Ruby, more..
 Hobbies: Coding, Open Source, Exploring New Tech
-Discord: shreyasita
+Discord: ftpraeist
 ```
