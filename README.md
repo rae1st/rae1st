@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/flower.jpeg" width="100%" alt="GitHub Profile Picture">
+  <img src="assets/ftpraeist.png" width="100%" alt="GitHub Profile Picture">
 </p>
 
 ```zsh
