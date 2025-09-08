@@ -1,5 +1,5 @@
 [![he/him pronouns](https://img.shields.io/badge/pronouns-he%2Fhim-lightblue)](https://pronoun.is/xie?or=he)
-[![Kolkata timezone](https://img.shields.io/badge/timezone-Kolkata-informational)](https://www.timeanddate.com/worldclock/india/delhi)
+[![Bihar timezone](https://img.shields.io/badge/timezone-bihar-informational)](https://www.timeanddate.com/worldclock/india/bihar)
 [![GitHub followers](https://img.shields.io/github/followers/rae1st?style=flat&color=green)](https://github.com/rae1st)
 
 # hello world
