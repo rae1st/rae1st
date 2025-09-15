@@ -12,6 +12,9 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate GitHub metrics
         uses: lowlighter/metrics@latest
         with:
@@ -47,10 +50,12 @@ jobs:
           plugin_16personalities_sections: personality, traits
           plugin_16personalities_scores: yes
 
-          plugin_music: yes
-          plugin_music_provider: spotify
-          plugin_music_token: ${{ secrets.SPOTIFY_TOKEN }}
-          plugin_music_limit: 5
-          plugin_music_mode: recent
+          config_order: base.header, isocalendar, streak, languages, wakatime, 16personalities
 
-          config_order: base.header, isocalendar, streak, languages, wakatime, 16personalities, music
+      - name: Commit and push metrics
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: update GitHub metrics"
+          file_pattern: github-metrics.svg
+          author_name: "github-actions[bot]"
+          author_email: "github-actions[bot]@users.noreply.github.com"
