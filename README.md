@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="https://github.com/rae1st/<REPO>/raw/main/github-metrics.svg" alt="GitHub Metrics">
+  <img src="https://raw.githubusercontent.com/rae1st/rae1st/main/github-metrics.svg" alt="GitHub Metrics">
 </p>
