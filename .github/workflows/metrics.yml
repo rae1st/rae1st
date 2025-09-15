@@ -28,8 +28,7 @@ jobs:
           plugin_isocalendar_duration: half-year
 
           plugin_streak: yes
-          plugin_streak_days: 365
-          plugin_streak_threshold: 0
+          plugin_streak_duration: 365
 
           plugin_languages: yes
           plugin_languages_analysis_timeout: 30
@@ -54,8 +53,12 @@ jobs:
 
       - name: Commit and push metrics
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add github-metrics.svg
-          git commit -m "Update GitHub metrics" || echo "No changes to commit"
-          git push
+          if [ -f github-metrics.svg ]; then
+            git config --local user.name "github-actions[bot]"
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git add github-metrics.svg
+            git commit -m "Update GitHub metrics" || echo "No changes to commit"
+            git push
+          else
+            echo "github-metrics.svg not found, skipping commit"
+          fi
