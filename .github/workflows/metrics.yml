@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Generate GitHub metrics
         uses: lowlighter/metrics@latest
@@ -39,23 +39,23 @@ jobs:
           plugin_languages_sections: most-used, recently-used
           plugin_languages_indepth: yes
 
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
-          plugin_wakatime_sections: time, languages, editors, os
-          plugin_wakatime_limit: 5
-          plugin_wakatime_user: ${{ secrets.WAKATIME_USER }}
-
           plugin_16personalities: yes
           plugin_16personalities_url: ${{ secrets.SIXTEEN_PERSONALITIES_URL }}
           plugin_16personalities_sections: personality, traits
           plugin_16personalities_scores: yes
 
-          config_order: base.header, isocalendar, streak, languages, wakatime, 16personalities
+          plugin_anilist: yes
+          plugin_anilist_user: ${{ secrets.ANILIST_USER }}
+          plugin_anilist_medias: anime
+          plugin_anilist_sections: favorites, watching
+          plugin_anilist_limit: 2
+
+          config_order: base.header, isocalendar, streak, languages, 16personalities, anilist
 
       - name: Commit and push metrics
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "chore: update GitHub metrics"
-          file_pattern: github-metrics.svg
-          author_name: "github-actions[bot]"
-          author_email: "github-actions[bot]@users.noreply.github.com"
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-metrics.svg
+          git commit -m "Update GitHub metrics" || echo "No changes to commit"
+          git push
